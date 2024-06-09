@@ -11,7 +11,7 @@ export default {
         "secondary": "#9A7AF1",
         "tertiary": "#707070",
         "pink": "#EE9AES"
-      }
+            }
     },
   },
   plugins: [],

@@ -18,7 +18,7 @@ export default function Navbar() {
 
   return (
     <>
-      <div className=" nav flex items-center justify-between space-x-14 bg-white p-4 md:px-14 max-w-screen-2xl mx-auto fixed top-0 right-0 left-0">
+      <div className=" nav flex items-center justify-between space-x-14 bg-white p-4 border-b  md:px-14 max-w-screen-2xl mx-auto fixed top-0 right-0 left-0">
         <div className="links flex items-center space-x-12">
           <div className="text-primary font-semibold text-md flex items-center space-x-3">
             <span className="bg-secondary py-1 px-2">LOGO</span>
