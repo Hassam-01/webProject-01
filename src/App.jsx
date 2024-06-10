@@ -3,11 +3,11 @@
 import './App.css'
 import About from './components/About'
 import Features from './components/Features'
-import Footer from './components/Footer'
 import Home from './components/Home'
 import Navbar from './components/Navbar'
 import Newletter from './components/Newletter'
 import Pricing from './components/Pricing'
+import Footer from './shared/Footer'
 
 function App() {
 

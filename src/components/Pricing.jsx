@@ -1,5 +1,8 @@
 import { useState } from "react"
 // import {green} from "/src/assets/green.png"
+import {motion} from "framer-motion";
+import {fadeIn} from "../variants";
+
 export default function Pricing() {
     const[isYearly, setIsYearly] = useState(false);
     const packages =[
@@ -9,7 +12,11 @@ export default function Pricing() {
     ]
 
   return (
-    <div className="mt-16">
+    <motion.div className="mt-16" id="pricing"
+    variants={fadeIn("up", 0.2)}
+            initial="hidden"
+            whileInView ={"show"}
+            viewport={{once:false, amount:0.7}}>
       <div className="text-center">
         <h2 className="md:text-5xl text-3xl text-primary mb-2 font-extrabold">Here are all our plans</h2>
         <p className="text-tertiary md:w-1/3 mx-auto px-4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odio, corrupti.</p>
@@ -51,6 +58,6 @@ export default function Pricing() {
                 </div>)
         }
       </div>
-    </div>
+    </motion.div>
   )
 }

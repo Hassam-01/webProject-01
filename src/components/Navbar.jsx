@@ -2,6 +2,7 @@ import { useState } from "react";
 import { MdOutlineLanguage } from "react-icons/md";
 import { HiXMark } from "react-icons/hi2";
 import { LuMenu } from "react-icons/lu";
+import {Link} from "react-scroll";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -11,7 +12,7 @@ export default function Navbar() {
   };
   const navItems = [
     { link: "Overview", path: "home" },
-    { link: "Feature", path: "feature" },
+    { link: "Feature", path: "features" },
     { link: "About", path: "about" },
     { link: "Pricing", path: "pricing" },
   ];
@@ -26,9 +27,9 @@ export default function Navbar() {
           </div>
           <ul className="md:flex space-x-12 hidden">
             {navItems.map(({ link, path }) => (
-              <a key={link} href={path} className="block hover:text-gray-300">
+              <Link key={link} to={path} spy={true} smooth={true} offset={-100} activeClass="active" className="block hover:text-gray-300">
                 {link}
-              </a>
+              </Link>
             ))}
           </ul>
         </div>
@@ -57,11 +58,11 @@ export default function Navbar() {
         </div>
       </div>
 
-      <div className={`md:hidden space-y-4 pt-24 pb-5 bg-secondary ${isMenuOpen?("block fixed top-0 left-0 right-0"):("hidden")} transition-all duration-300`}>
+      <div className={`md:hidden space-y-4 pt-24 pb-5 pl-2 bg-secondary ${isMenuOpen?("block fixed top-0 left-0 right-0"):("hidden")} transition-all duration-300`}>
         {navItems.map(({ link, path }) => (
-              <a key={link} href={path} className="block hover:text-gray-300">
-                {link}
-              </a>
+               <Link key={link} to={path} spy={true} smooth={true} offset={-100} activeClass="active" onClick={toggleMenu} className="text-white block hover:text-gray-300">
+               {link}
+             </Link>
             ))}
       </div>
     </>
