@@ -11,6 +11,9 @@ export default {
         "secondary": "#9A7AF1",
         "tertiary": "#707070",
         "pink": "#EE9AES"
+            },
+      boxShadow:{
+        '3xl' : '0 10px 50px 0px rgba(0,0,0,0.15)',
       }
     },
   },
