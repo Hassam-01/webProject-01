@@ -22,7 +22,7 @@ export default function Banner({banner, heading, subHeading, btn1, btn2}) {
               <button className="btnprimary ">
                 {btn1}
               </button>
-              <button className="btnprimary ">
+              <button className={`btnprimary ${btn2 === "" ?" hidden": ""}`}>
                 {btn2}
               </button>
             </div>
